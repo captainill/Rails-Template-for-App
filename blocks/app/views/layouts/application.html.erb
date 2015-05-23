@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your App</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400,700,800' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+  <meta name="description" content="Heya is a free iOS and Android app for creating awesome GIF messages quickly to share via sms or social!" />
+  <link rel='icon' type='image/png' href='/favicon.png' />
+  <%= render partial: "partials/google_analytics" %>
+</head>
+<body class="<%= yield :body_class %>">
+
+<%= yield %>
+
+<%= javascript_include_tag 'application' %>
+
+</body>
+</html>

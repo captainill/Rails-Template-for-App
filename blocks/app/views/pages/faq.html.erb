@@ -1,0 +1,33 @@
+<% body_class 'page faq' %>
+
+<% if params['inapp'] != 'true' %>
+  <%= render "partials/page_header" %>
+<% end %>
+
+<%= render "partials/form_iframe" %>
+
+<section class="container">
+  <div class="content">
+    <div class="row">
+      <div class="col-xs-12 col-md-9">
+        <% if params['inapp'] != 'true' %>
+          <h1>Faq / Frequently Asked</h1>
+        <% end %>
+        <ul class="faq-list">
+            <li>
+                <h3>1</h3>
+                <p><strong>Restart your iPhone</strong> to fix this issue permanently.</p>
+            </li>
+            <li>
+                <h3>2</h3>
+                <p>2 text</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "partials/footer" %>
+
+<%= javascript_include_tag "subpage" %>

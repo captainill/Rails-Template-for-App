@@ -1,0 +1,27 @@
+<% body_class 'page blog' %>
+
+<%= render "partials/page_header" %>
+<%= render "partials/form_iframe" %>
+
+<section class="container">
+  <div class="content">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+        <h1>Blog</h1>   
+        <div class="posts">
+          <% @posts.each do |post| %>
+            <div class="post">
+              <div class="post-header">
+                <h2><%= link_to post.title, post_path(post) %></h2>
+                <span class="date"><%= (post.created_at < 20.day.ago) ? post.created_at : time_ago_in_words(post.created_at) %></span>
+              </div>
+              <div class="post-content"><%= raw @markdown.render(post.content) %></div>
+              <div class="post-footer"><%= link_to 'permalink', post_path(post) %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render "partials/footer" %>

@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+/node_modules
+blocks/tmp
+blocks/npm-debug.log
+blocks/log/

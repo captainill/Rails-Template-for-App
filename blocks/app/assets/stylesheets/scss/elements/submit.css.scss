@@ -1,0 +1,131 @@
+
+#signup-wrap{  
+  display: inline-block;
+  max-width: 178px;
+
+  .form-group{
+    margin-bottom: 0;
+  }
+
+  .popover{
+    font-size: 12px;
+    line-height: 1.2;
+
+    .popover-content{
+      padding: 8px 10px;
+    }
+  }
+
+
+  input.form-control{
+    height: 32px;
+    padding: 9px 12px;
+    color: #fff;
+    font-weight: 400;
+    font-family: $ultra;
+    font-weight: 300;
+    font-size: 12px;
+    border: 1px solid white;
+    border-bottom-left-radius: 3px !important; 
+    border-top-left-radius: 3px !important;
+    background-color: transparent;
+
+    &::-webkit-input-placeholder {
+       color: white;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: white;  
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: white;  
+    }
+
+    &:-ms-input-placeholder {  
+       color: white;  
+    }
+  }
+
+  .loader{
+    top: -18px;
+    right: 11px;
+
+    .spin {
+      width: 15px;
+      height: 15px;
+      
+      &:before {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 2px solid lighten($pink, 10%);
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 2px solid lighten($pink, 10%);
+      }
+    }
+
+    &.slideIn{
+      @include transition(all .2s ease);
+      opacity: 100;      
+      top: 8px;
+      right: 11px;
+    }
+  }
+
+  button#submit-capture{
+    height: 32px;
+    padding: 9px 18px;
+    background-color: #fff;
+    background: white image-url('submit-state-icons@2x.png') center -47px no-repeat;
+    background-size: 19px 69px;
+    color: $black;
+    font-family: $ultra;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 3px;
+    border-color: white;  
+    z-index: 0;
+    outline: none;
+    border-bottom-left-radius: 0 !important; 
+    border-top-left-radius: 0 !important;     
+    @include transition(all 0.3s ease);
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      @include transition(all 0.3s ease);
+    }
+
+    &.btn-success {
+      background-position: center 6px;
+      &:after {
+        content: "" !important;
+      }      
+    }
+
+    &.btn-sending {
+      background-position: center -24px;
+      &:after {
+        content: "" !important;
+      }
+    }
+
+    &.btn-sending, &.btn-success{
+      color: transparent;
+
+      &:after {
+        -webkit-animation: moveUp 0.5s;
+        -moz-animation: moveUp 0.5s;
+        animation: moveUp 0.5s;
+        z-index: 1;
+        color: #fff;
+        top: 0;
+        left: 24px;
+        line-height: 60px;
+      }       
+    }    
+  }
+}

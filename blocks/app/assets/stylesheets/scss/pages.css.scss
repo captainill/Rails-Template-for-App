@@ -1,0 +1,175 @@
+.page{
+
+  #header{
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 200px;
+    padding-top: 0;
+
+    .top{
+      padding-top: 75px;
+      .app-icon{
+        float: left;
+        width: 52px;
+        height: 50px;
+        background-size: 52px 50px;
+      }
+
+      .text-wrap{
+        color: $pink;
+        float: left;
+        text-align: left;
+        margin: 0 0 0 10px;
+
+        .title{
+          font-size: 28px;
+        }
+
+        .message{
+          font-size: 14px;
+        }
+      }
+
+      .top-store{
+        display: inline-block;
+        float: right;
+        margin: 0;
+
+        span{
+          width: 155px;
+          height: 50px;
+          background-size: 155px 50px;
+        }
+
+        &.app{
+          margin-right: 10px;
+        }        
+      }     
+    }
+  }
+  
+  .content{
+    padding: 45px 0 90px 0;
+
+    h1{
+      margin-bottom: 40px;
+      font-family:  $ultra;
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    p{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .mailto{
+      display: inline-block;
+      color: $pink;
+      margin-top: 15px;
+      font-family:  $ultra;
+      font-size: 36px;
+      font-weight: 400;
+    }
+  }
+
+  #footer{
+    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    .page{
+      #header{
+        .top{
+          .top-store{
+            margin: 0;
+          }
+
+          .app-icon{
+            width: 80px;
+            height: 76px;
+            background-size: 80px 76px;
+          }
+
+          .text-wrap{
+            margin: 14px 0 0 15px;
+
+            .title{
+              font-size: 28px
+            }
+
+            .message{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+
+    #header{
+      padding-bottom: 20px;
+
+      .top {
+        padding-top: 20px;
+
+        .logo-inner{
+          width: 338px;
+          margin: 0 auto;
+          margin-bottom: 15px;
+
+          .app-icon{
+            float: none;
+          }
+
+          .text-wrap{
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+            margin: 0 0 0 4px;
+          }          
+        }
+      }
+
+      .appstore-wrap{
+        .top-store{
+          margin: 0;
+          width: 130px;
+          height: 42px;
+          background-size: 130px 42px;
+
+          &:first-child{
+            margin-right: 5px;
+          }
+
+          &.pull-right{
+            float: none !important;
+          }
+
+          span{
+            width: 130px;
+            height: 42px;
+            background-size: 130px 42px;
+          }
+        }
+      }
+    }
+
+    .page{
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 414px) {
+
+    .android-device{
+      #header{
+
+        .app-store-black{
+        }
+      }
+    }
+  }  
+}

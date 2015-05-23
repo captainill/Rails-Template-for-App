@@ -1,0 +1,50 @@
+<% # Not allowing crawling since this could be semi-private video info %>
+<meta name="robots" content="noindex, nofollow" />
+<% # Started with the 'Full Social Media Tag Template' from here: %>
+<% # http://moz.com/blog/meta-data-templates-123 %>
+<meta name="description" content="<%= description %>" />
+<% # Google Authorship and Publisher Markup  %>
+<% # Add if we ever have a Google+ account. %>
+<% #%link{:rel => "publisher", :href => "https://plus.google.com/[Google+_Page_Profile]"} %>
+<% # Schema.org markup for Google+ %>
+<meta itemprop="name" content="<%= title %>" />
+<meta itemprop="description" content="<%= description %>" />
+<meta itemprop="image" content="<%= image_url %>" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="<%= twitter_publisher %>" />
+<meta name="twitter:creator" content="<%= twitter_publisher %>" />
+<meta name="twitter:title" content="<%= name %>" />
+<meta name="twitter:description" content="<%= title %>" />
+<meta name="twitter:image" content="<%= image_url %>" />
+<meta name="twitter:url" content="<%= page_url %>" />
+<meta name="twitter:app:name:iphone" content="<%= name %>" />
+<meta name="twitter:app:id:iphone" content="<%= ios_app_id %>" />
+
+<% # If the video were playable in-app, we could add a URL %>
+<% if false %>
+  <meta name="twitter:app:url:iphone" content="example://action/5149e249222f9e600a7540ef" />
+<% end %>
+
+<% # If we had iPad or Android apps: %>
+<% if false %>
+  <meta name="twitter:app:name:ipad" content="Example App" />
+  <meta name="twitter:app:id:ipad" content="306934135" />
+  <meta name="twitter:app:url:ipad" content="example://action/5149e249222f9e600a7540ef" />
+  <meta name="twitter:app:name:googleplay" content="Example App" />
+  <meta name="twitter:app:id:googleplay" content="com.example.app" />
+  <meta name="twitter:app:url:googleplay" content="http://example.com/action/5149e249222f9e600a7540ef" />
+<% end %>
+
+<% # Open Graph data %>
+<meta property="og:type" content="video.movie" />
+<meta property="og:title" content="<%= title %>" />
+<meta property="og:url" content="<%= page_url %>" />
+<meta property="og:image" content="<%= image_url %>" />
+<meta property="og:description" content="<%= description %>" />
+<meta property="og:name" content="<%= name %>" />
+<meta property="fb:app_id" content="<%= facebook_app_id %>"/>
+<meta property="og:video" content="<%= video_url %>" />
+<meta property="og:video:height" content="640" />
+<meta property="og:video:width" content="640" />
+<meta property="og:video:type" content="video/mp4" />
