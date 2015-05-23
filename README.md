@@ -76,27 +76,6 @@ at least one player page, do a push to production:
     sh heroku.sh prod
 
 
-Blog
----
-
-Posts are added as a bit of a hack based on seed files.
-
-- Add seed rake files to db/posts
-- Add any static images to be served to public/images/blog and reference them by dropping /public from the path
-- Markdown is supported but if you need to set the width/height of an image you can just use html for the img tag
-- Then run the command example below
-
-```
-cd blocks
-rake db:post:post_file_name # Name of the file EXCLUDING the .rb extension 
-```
-
--for production on heroku use
-
-```
-heroku run bash
-rake db:post:post_file_name --trace
-```
 
 FrontEnd - Compiling bundle
 ---
